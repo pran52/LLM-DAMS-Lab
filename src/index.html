@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <nav>
+        <h1>Project Title Goes Here</h1>
+    </nav>
+    <form>
+        <div id="prompt-section">
+            <label for="user-prompt-input">Please type in a prompt:</label>
+            <textarea id="user-prompt-input"></textarea>
+            <button id="next-button">Next</button>
+        </div>
+        <div id="llm-selection-section">
+            <input id="chat" type="checkbox"/>
+            <label for="chat">ChatGPT</label>
+
+            <input id="gemini" type="checkbox"/>
+            <label for="gemini">Gemini</label>
+
+            <input id="llama" type="checkbox"/>
+            <label for="llama">LlaMA</label>
+        </div>
+    </form>
+</body>
+</html>
