@@ -2,29 +2,40 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>Project Title Here</title>
     <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <h1>Project Title Goes Here</h1>
     </nav>
-    <form>
+    <form >
         <div id="prompt-section">
             <label for="user-prompt-input">Please type in a prompt:</label>
             <textarea id="user-prompt-input"></textarea>
-            <button id="next-button">Next</button>
+            <div id="next-button" aria-roledescription="next button">Next</div>
         </div>
+        <hr id="first-seperator">
         <div id="llm-selection-section">
-            <input id="chat" type="checkbox"/>
-            <label for="chat">ChatGPT</label>
-
-            <input id="gemini" type="checkbox"/>
-            <label for="gemini">Gemini</label>
-
-            <input id="llama" type="checkbox"/>
-            <label for="llama">LlaMA</label>
+            <h2 id="llm-question">What LLMs do you have access to?</h2>
+            <p id="llm-option-desc">Select one or more below:</p>
+            <div id="llm-options"> 
+                
+                    
+                <label for="chat" class="option-chip"><input id="chat" type="checkbox" value="chatgpt"/>ChatGPT</label>       
+                <label for="gemini" class="option-chip"><input id="gemini" type="checkbox" value="gemini"/>Gemini</label>
+                <label for="llama" class="option-chip"><input id="llama" type="checkbox" value="llama"/>LlaMA</label>
+            
+                
+            </div>
+            
+            <button type="submit" id="submit-button">Generate</button>
         </div>
+
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
